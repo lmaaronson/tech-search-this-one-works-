@@ -40,8 +40,10 @@ export default class Saved extends Component {
                                                                 <div class="card-body">
                                                                     <h5 className="card-title">{job.title}</h5>
                                                                     <p class="card-text">    </p>
-                                                                    <a href="#" class="btn btn-primary mr-3">Apply</a>
-                                                                    <a href="#" class="btn btn-primary mr-3">Delete</a>
+                                                                    {/* <a href="#" class="btn btn-primary mr-3">Apply</a>
+                                                                    <a href="#" class="btn btn-primary mr-3">Delete</a> */}
+                                                                    
+                                                                    
                                                                     <div class="form-group mt-3">
                                                                         {/* <label for="exampleFormControlTextarea1">Add a comment</label> */}
                                                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="[profanities]"></textarea>

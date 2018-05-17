@@ -5,7 +5,7 @@ import "./RemoveBtn.css";
 // That way we don't have to define them all individually
 const RemoveBtn = props => (
   <span className="remove-btn" {...props}>
-    -
+    Delete Job
   </span>
 );
 
