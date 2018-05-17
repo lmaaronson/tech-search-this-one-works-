@@ -21,25 +21,6 @@
         <br>
         <input type="submit" value="Register" id="register">
     </form>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <script>
-        $("#register").on("click", function (event) {
-            event.preventDefault()
-            if ($("#password").val() == $("#password2").val()) {
-                obj = {
-                    email: $("#email").val(),
-                    password: $("#password").val()
-                }
-                $.ajax({
-                    type: "POST",
-                    url: "/signup",
-                    data: obj
-                }).then(function(res){
-                    window.location.replace("/signin")
-                })
-            }
-        })
-    </script>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 var exports = module.exports = {}
 var path= require(`path`)
+const db = require(`..\models`)
 
 exports.signup = function(req,res){
     console.log('signing up!')
@@ -14,7 +15,6 @@ exports.signin = function(req,res){
 }
 
 exports.dashboard = function(req,res){
-    console.log("dash")
     res.sendFile(path.join(__dirname, "../client/public/dash.html"))
 
 }

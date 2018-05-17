@@ -17,29 +17,30 @@ router.get("/searchJobs", (req, res) => {
     .catch(err => res.status(422).json(err));
 });
 
-router.post("/searchJobs/save", function (req, res) {
-  //console.log('req.body', req.body);
+// router.post("/searchJobs/save",isLoggedIn,  function (req, res) {
+//   //console.log('req.body', req.body);
 
-  let job = req.body;
+//   let job = req.body;
 
-  db.jobs.create({  
-        title: job.title,
-        description: job.description,
-        post_date: job.post_date,
-        company_name: job.company_name,
-        // company_city: job.company_city,
-        company_state: job.company_state,
-        keywords: job.keywords,
-        apply_url: job.apply_url,
-        company_url: job.company_url
-  })
-  .then(newJob => {
-    console.log(`title ${newJob.title}, with id ${newJob.id} has been created.`);
-  });
-});
+//   db.jobs.create({  
+//         title: job.title,
+//         description: job.description,
+//         post_date: job.post_date,
+//         company_name: job.company_name,
+//         // company_city: job.company_city,
+//         company_state: job.company_state,
+//         keywords: job.keywords,
+//         apply_url: job.apply_url,
+//         company_url: job.company_url,
+//         user: req.user.id
+//   })
+//   .then(newJob => {
+//     console.log(`title ${newJob.title}, with id ${newJob.id} has been created.`);
+//   });
+// });
 
-router.get("/savedJobs", (req, res) => {
-  db.jobs.findAll().then(jobs => res.json(jobs));
-});
+// router.get("/savedJobs", (req, res) => {
+//   db.jobs.find({user:req.user.id}).then(jobs => res.json(jobs));
+// });
 
 module.exports = router;

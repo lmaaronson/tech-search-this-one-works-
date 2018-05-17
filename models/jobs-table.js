@@ -13,6 +13,7 @@ module.exports = function(sequelize, Sequelize) {
     keywords:     {type: Sequelize.TEXT},
     apply_url:    {type: Sequelize.TEXT},
     company_url:  {type: Sequelize.TEXT},
+    user: {type: Sequelize.INTEGER}
   },
   {timestamps: false
   }

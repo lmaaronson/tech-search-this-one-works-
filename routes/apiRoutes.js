@@ -21,7 +21,7 @@ router.get("/api/searchJobs", (req, res) => {
 // Save job
 // router.post("/searchJobs/save", function (req, res) {
 //   console.log(req.params)
-  // Use the article id to find and update its saved boolean
+//   Use the article id to find and update its saved boolean
 //   Job.create({
 //     id: job.id,
 //     title: job.title,
@@ -43,8 +43,8 @@ router.get("/api/searchJobs", (req, res) => {
 //         // Or send the document to the browser
 //         res.send(doc);
 //       }
- //  });
-  // });
+//   });
+//   });
 
 // new comment for commit and add
 // get all saved jobs job
