@@ -1,0 +1,24 @@
+.add-btn {
+  /* original placeholder button style */
+  float:right;
+  font-size: 2em;
+  /* min-height: 100%; */
+  width:25%;
+  text-align:center;
+  display: inline-flex;
+  align-items: center;
+  justify-content:center;
+  /* color: green; */
+  /* border: 3px solid green; */
+
+/* CSS taken from W3 Schools example */
+  background-color: rgb(76, 130, 175); /* not green */
+    border: none;
+    color: white;
+    /* padding: 15px 32px; */
+    /* text-align: center; */
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    /* font-size: 16px; */
+    border-radius: 8px;
+}
