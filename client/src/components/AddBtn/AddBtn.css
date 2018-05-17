@@ -1,0 +1,12 @@
+.add-btn {
+  float:right;
+  font-size: 2em;
+  min-height: 100%;
+  width:50%;
+  text-align:center;
+  display: inline-flex;
+  align-items: center;
+  justify-content:center;
+  color: green;
+  border: 3px solid green;
+}

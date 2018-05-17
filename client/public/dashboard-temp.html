@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard prelim</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <button title="search">Search</button>
+    <button title="add">Add</button>
+    <div>
+        <a href="#wishlist">Saved Jobs </a> &nbsp;| &nbsp;<a href="#share_wishlist">Share</a>
+        <div id="wishlist">
+            <div id="sortlist">Sort by: &nbsp;
+                <button id="datesort">Date posted</button>
+                <button id="prioritysort">Priority</button>
+                <button id="titlesort">Job Title</button>
+                <button id="employersort">Employer</button>
+            </div>
+            <div class="joblisting">
+                <p class="title">Job Title  <span class="postdate">Jan 1</span></p>
+                <p class="employer">Company Name <span class="location">City in MN</span></p>
+                <!-- <p class="brief">Brief summary intro to job description, if available. Maybe first 1-3 lines of full description</p> -->
+                <button class="seejob">View Job Details</button>
+                <select>
+                        <option value="apply">Apply</option>
+                        <option value="savejob" disabled>Save</option>
+                        <option value="dumpjob">Delete</option>
+                        <option value="audi">Audi</option>
+                      </select>
+            </div>
+        </div>
+    </br>
+    <a href="appliedjobs.html">Jobs Applied for </a> &nbsp;| &nbsp;<a href="#share_appliedjobs">Share</a>
+    </div>
+    <a href="#profile">My Profile</a>
+
+
+</body>
+</html>
+
+<!-- title, desc, location, keywords, email, password -->
