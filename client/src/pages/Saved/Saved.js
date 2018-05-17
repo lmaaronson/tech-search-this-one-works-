@@ -1,22 +1,25 @@
 import React, { Component } from "react";
-//import RemoveBtn from "../../components/RemoveBtn";
-//import AddBtn from "../../components/AddBtn";
-//import Jumbotron from "../../components/Jumbotron";
-import API from "../../utils/API";
-import { Col, Row, Container } from "../../components/Grid";
-import { List, SearchItem } from "../../components/List";
-import { Input, FormBtn } from "../../components/Form";
 
-export default class Saved extends Component {
+//import RemoveBtn from "../../Components/RemoveBtn";
+import AddBtn from "../../Components/AddBtn";
+import Jumbotron from "../../Components/Jumbotron";
+import API from "../../utils/API";
+import { Col, Row, Container } from "../../Components/Grid";
+import { List, ListItem, SavedItem } from "../../Components/List";
+import { Input, FormBtn } from "../../Components/Form";
+
+
+class Saved extends Component {
     state = {
-        savedJobs: []
+        savedJobs: [],
     };
 
     componentDidMount() {
+        console.log("1!!!!!!!!!")
         API.getSavedJobs().then(res => {
-            console.log('res', res);
+            console.log('res', res.data);
             let savedJobs = res.data;
-            this.setState({ savedJobs });            
+            this.setState({ savedJobs: savedJobs });            
         });
     }
 
@@ -27,21 +30,24 @@ export default class Saved extends Component {
                 <Container>
                     <Row>
                         <Col size="md-12">
-                            <form>
-                                <Container>
-                                    {
-                                        this.state.savedJobs.map(job => {
+                            {!this.state.savedJobs ? (
+                                <h1 className="text-center">No Jobs to Display</h1>
+                            ) : (
+                                    <List>
+                                        {this.state.savedJobs.map(job => {
                                             return (
-                                                <Row>
-                                                    <Col size="md-12">
-                                                        {job.title}  // task button here
-                                                    </Col>
-                                                </Row>
+                                                <SavedItem
+                                                    key={job.id}
+                                                    title={job.title}
+                                                    url={job.url}
+                                                    keywords={job.keywords}
+                                                    companyName={job.company_name}
+                                                    remove={() => this.removeJob(job.id)}
+                                                    />
                                             );
-                                        })
-                                    }
-                                </Container>
-                            </form>
+                                        })}
+                                    </List>
+                                )}
                         </Col>
                     </Row>
                 </Container>
@@ -49,3 +55,6 @@ export default class Saved extends Component {
         );
     }
 }
+
+
+export default Saved;

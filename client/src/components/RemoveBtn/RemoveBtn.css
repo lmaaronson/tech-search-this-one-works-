@@ -1,12 +1,24 @@
 .remove-btn {
+  /* original placeholder button style */
   float:right;
   font-size: 2em;
-  min-height: 100%;
-  width:50%;
+  /* min-height: 100%; */
+  width:25%;
   text-align:center;
   display: inline-flex;
   align-items: center;
   justify-content:center;
-  color: red;
-  border: 3px solid red;
+  /* color: red; */
+  /* border: 3px solid red; */
+
+/* CSS taken from W3 Schools example */
+  background-color: rgb(56, 56, 56); /* Green */
+    border: none;
+    color: white;
+    /* padding: 15px 32px; */
+    /* text-align: center; */
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    /* font-size: 16px; */
+    border-radius: 8px;
 }

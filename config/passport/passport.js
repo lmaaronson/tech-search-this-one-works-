@@ -40,7 +40,7 @@ passport.use('local-signup', new LocalStrategy(
   },
 
   function(req, email, password, done){
-     
+     console.log("!!!!!!!!!!!!!!!!!")
 
     var generateHash = function(password) {
     return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
@@ -65,6 +65,7 @@ passport.use('local-signup', new LocalStrategy(
 
 
       User.create(data).then(function(newUser,created){
+        console.log("!!!!!!!!!!!!!!!!!!!")
         if(!newUser){
           return done(null,false);
         }
