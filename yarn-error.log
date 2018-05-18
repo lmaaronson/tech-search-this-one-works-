@@ -27,7 +27,7 @@ npm manifest:
     "name": "tech-search",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
       "server": "node server.js",
       "client": "node scripts/start-client.js",
